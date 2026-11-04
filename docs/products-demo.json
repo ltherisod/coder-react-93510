@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "G213 Prodigy",
+      "description": "Durabilidad apta para los requisitos de los videojuegos. Los interruptores de tecla Mech-Dome táctiles son resistentes a salpicaduras. Iluminación RGB LIGHTSYNC personalizable. Reposamanos integrado y patas ajustables. Controles multimedia específicos.",
+      "thumbnail": "/img/g213.webp",
+      "price": 500,
+      "category": "teclados",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "title": "K400 PLUS",
+      "description": "El K400 es un silencioso teclado fácil de usar, con un touchpad integrado y todas las teclas de acceso rápido favoritas de los usuarios de Windows® y Android™. Los controles multimedia simplifican la navegación en un televisor conectado a una PC.",
+      "thumbnail": "/img/k400.webp",
+      "price": 250,
+      "category": "teclados",
+      "stock": 3
+    },
+    {
+      "id": 3,
+      "title": "G502 LIGHTSPEED",
+      "description": "El diseño emblemático del G502 se combina con la tecnología inalámbrica LIGHTSPEED de calidad profesional para una conectividad ultrarrápida y fiable. El sensor HERO 25K cuenta con un seguimiento submicrónico. Compatible con POWERPLAY para una carga continua tanto en reposo como en juego.",
+      "thumbnail": "/img/g502.webp",
+      "price": 350,
+      "category": "mouse",
+      "stock": 10
+    },
+    {
+      "id": 4,
+      "title": "G502 X PLUS",
+      "description": "G502 X PLUS es la última adición a la legendaria gama G502. Reinventado con nuestros primerísimos interruptores híbridos LIGHTFORCE, tecnología inalámbrica LIGHTSPEED de nivel profesional, RGB LIGHTSYNC, sensor HERO 25K, etc.",
+      "thumbnail": "/img/g502x.webp",
+      "price": 600,
+      "category": "mouse",
+      "stock": 10
+    },
+    {
+      "id": 5,
+      "title": "G325",
+      "description": "Sumérgete en el audio del juego. Estos auriculares inalámbricos para gaming ofrecen audio dinámico de 24 bits, un micrófono con formación de haces integrado y más de 24 horas de autonomía. Disfruta de una comodidad excepcional gracias a su diseño ajustable y estilizado.",
+      "thumbnail": "/img/g325.webp",
+      "price": 620,
+      "category": "auriculares",
+      "stock": 6
+    },
+    {
+      "id": 6,
+      "title": "G522 LIGHTSPEED",
+      "description": "Juega como las leyendas con unos auriculares diseñados para gaming de alto voltaje en PC. El audio HQ envolvente, el mejor micrófono de la categoría gaming y el sofisticado RGB LIGHTSYNC lateral convierten cada partida, cada logro y cada avance en algo legendario.",
+      "thumbnail": "/img/g522.webp",
+      "price": 440,
+      "category": "auriculares",
+      "stock": 6
+    }
+  ],
+  "total": 6,
+  "skip": 0,
+  "limit": 6
+}

@@ -1,10 +1,14 @@
 import logo from "../../assets/logo.png"
 import Cartwidget from "../Cartwidget/Cartwidget"
+import "./navbar.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <img src={logo} alt="" width={50} />
+    <nav className="navbar">
+
+      <div className="brand">
+        <img src={logo} alt="" />
+      </div>
 
       <ul>
         <li>Teclados</li>
