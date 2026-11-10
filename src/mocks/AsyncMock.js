@@ -45,3 +45,17 @@ export const getProducts = ()=> {
         },3000)
     })
 }
+
+export const getOneProduct = (id) => {
+  return new Promise((resolve, reject) => {
+    const product = products.find((prd) => prd.id === id);
+
+    setTimeout(() => {
+      if (product) {
+        resolve(product);
+      } else {
+        reject("No se encontró el producto solicitado");
+      }
+    }, 3000);
+  });
+};
