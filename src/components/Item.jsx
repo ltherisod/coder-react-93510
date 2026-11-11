@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom'
 const Item = ({prod}) => {
   const navigate = useNavigate()
   return (
-   <Card style={{ width: '18rem' }}>
+    // <Link to={`/item/${prod.id}`}>
+    <Card style={{ width: '18rem' }}>
+  {/* //  <Card style={{ width: '18rem' }} onClick={()=> navigate(`/item/${prod.id}`)} > */}
       <Card.Img variant="top" src={prod.img} />
       <Card.Body>
         <Card.Title>{prod.name}</Card.Title>
@@ -17,9 +19,10 @@ const Item = ({prod}) => {
         {/* TRADICIONAL */}
         {/* <Link className='btn btn-primary' to={'/item/' + prod.id}>Ver Más</Link> */}
         {/* SUGAR SYNTAX */}
-           <Link className='btn btn-primary' to={`/item/${prod.id}`}>Ver Más</Link>
+        <Link className='btn btn-primary' to={`/item/${prod.id}`}>Ver Más</Link>
       </Card.Body>
     </Card>
+    // </Link>
   )
 }
 
