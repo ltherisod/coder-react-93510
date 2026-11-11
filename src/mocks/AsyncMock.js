@@ -49,7 +49,10 @@ export const getProducts = ()=> {
 export const getOneProduct = (id) => {
   return new Promise((resolve, reject) => {
     const product = products.find((prd) => prd.id === id);
-
+    //NO RECOMIENDO
+    //  setTimeout(()=>{
+    //         resolve(products[0])
+    //     },3000)
     setTimeout(() => {
       if (product) {
         resolve(product);

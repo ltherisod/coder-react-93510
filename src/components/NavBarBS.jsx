@@ -1,10 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const NavBarBS = () => {
   return (
     <nav className="navbar sm:navbar-expand bg-1 fg-2">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <NavLink className="navbar-brand" to="/">Navbar</NavLink>
     <button className="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" aria-hidden="true"></span>
     </button>
@@ -16,16 +17,16 @@ const NavBarBS = () => {
       <div className="drawer-body">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+            <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
+            <NavLink className="nav-link" to="/category/nuevos">Nuevos</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
+            <NavLink className="nav-link" to="/category/mas vendidos">Mas Vendidos</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+            <NavLink className="nav-link disabled" to="/category/ofertas">Ofertas</NavLink>
           </li>
         </ul>
       </div>

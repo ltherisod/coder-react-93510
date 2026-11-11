@@ -6,26 +6,27 @@ import logoShop from "../assets/logo-shop.png"
 // IMPORT DE CSS
 import "../assets/styles/Navbar.css"
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
 
 function NavBarRBS() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={NavLink} to='/'>
             <img src={logoShop} alt='logo' className='logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Ofertas</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/category/ofertas'>Ofertas</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={NavLink} to='/category/nuevos'>
                 Nuevos
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Más Vendidos</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/category/mas vendidos'>Más Vendidos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidget/>

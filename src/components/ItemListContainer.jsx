@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getProducts } from "../mocks/AsyncMock" //asi importamos lo que exportamos con export solo
-import ItemCount from "./ItemCount" //asi importamos con el export default
 import ItemList from "./ItemList"
+import { useParams } from "react-router-dom"
 
 
 //1. DECLARAR EL COMPONENTE
@@ -10,13 +10,25 @@ const ItemListContainer = ({greeting})=> {
     //const {greeting}=props
     const [data, setData]=useState([])
 
+    const {type} = useParams()
+ console.log(type, 'categoria')
+ 
     useEffect(()=>{
         getProducts()
-        .then((res)=> setData(res))
-    },[])
+        .then((res)=>{
+            if(type){
+                //filtrar
+                setData(res.filter((prod)=> prod.category === type))
+            }else{
+                //no filtro
+                setData(res)
+            }
+        })
+        //estar a la escucha del cambio de categoria
+    },[type])
    
 //2. retorno JSX
-console.log('ItemListContainer', data)
+// console.log('ItemListContainer', data)
 return (
     <div>
         <h1>{greeting}</h1>
