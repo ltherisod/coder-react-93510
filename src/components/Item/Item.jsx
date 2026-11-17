@@ -1,20 +1,23 @@
+import { Link } from "react-router";
+import { IoIosArrowForward } from "react-icons/io";
 import "./item.css";
 
 const Item = ({ prod }) => {
   return (
-    <div className="item-card">
-      <div className="item-image">
-        <img src={prod.image} alt={prod.name} />
+    <li className="item">
+      <div className="img-item-container">
+        <img className="img-item" src={prod.image} alt="" />
       </div>
-      <div className="item-content">
-        <p className="item-name">{prod.name}</p>
-        <p className="item-stock">Precio: ${prod.price}</p>
 
-        <div>
-          <button>Ver detalles</button>
-        </div>
+      <div className="text-item-container">
+        <p className="title-item">{prod.name}</p>
+        <p className="price-item">${prod.price}</p>
+        <Link to={`/item/${prod.id}`} className="button-item">
+          <IoIosArrowForward />
+          <p>MAS INFORMACION</p>
+        </Link>
       </div>
-    </div>
+    </li>
   )
 }
 

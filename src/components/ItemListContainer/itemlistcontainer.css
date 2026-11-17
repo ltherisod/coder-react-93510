@@ -1,16 +1,23 @@
-.item-list-container {
-  width: 100%;
-  padding: 40px 30px;
-  background-color: #0f0f0f4c;
+.item-list-container{
+  padding: 0 40px;
+}
+.button-to-back{
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(207, 207, 207);
+  background-color: rgb(19, 19, 19);
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  padding: 5px 10px;
+  border: none;
 }
 
-.container-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #0066cc;
-  padding-bottom: 15px;
+.button-to-back:hover {
+  cursor: pointer;
 }
