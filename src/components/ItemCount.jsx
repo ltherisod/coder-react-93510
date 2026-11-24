@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react"
 
-const ItemCount = ({initial, stock})=> {
+const ItemCount = ({initial, stock, onAdd})=> {
 // const [variableDeEstado, funcionModificadora]= useState(VALORINICIAL)
 const [count, setCount] =useState(initial)
 
@@ -29,7 +29,7 @@ const restar = ()=> {
                 <button className="btn btn-outline-success fw-bold px-3" onClick={sumar}>+</button>
             </div>
             <button
-                className="btn btn-primary fw-semibold px-4 flex-grow-1"
+                className="btn btn-primary fw-semibold px-4 flex-grow-1" onClick={()=>onAdd(count)}
                 disabled={stock === 0 || count === 0}
             >
                 Comprar
