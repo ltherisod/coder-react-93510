@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+#poner el archivo .env para que no se suba a github (sin el #)
+#.env

@@ -25,6 +25,7 @@ function App() {
         <Route path='/' element={<ItemListContainer greeting='Bienvenidos a mi App' />} />
         <Route path='/category/:type' element={<ItemListContainer greeting='Estas en la categoría: ' />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
+        <Route path='/checkout' element={<Checkout/>}/>
          <Route path='/cart' element={<CartContainer />} />
         <Route path='*' element={<Error />} />
       </Routes>

@@ -34,7 +34,7 @@ const CartView = () => {
             </Table>
             <div className='d-flex justify-content-between'>
                 <Button variant='danger' onClick={clear}>Vaciar carrito</Button>
-                <button className='btn btn-success'>Terminar compra</button>
+                <Link className='btn btn-success' to='/checkout'>Terminar compra</Link>
             </div>
         </div>
     )

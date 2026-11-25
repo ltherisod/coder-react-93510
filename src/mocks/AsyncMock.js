@@ -1,6 +1,6 @@
 const products = [
     {
-        id:'01',
+        // id:'01', NO PONGO EL ID EN FIREBASE
         name: 'Random 1',
         description: 'lorem lorem lorem',
         price: 5000,
@@ -9,7 +9,7 @@ const products = [
         category: 'nuevos'
     },
      {
-        id:'02',
+        // id:'02',
         name: 'Random 2',
         description: 'lorem lorem lorem',
         price: 25000,
