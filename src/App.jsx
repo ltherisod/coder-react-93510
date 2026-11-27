@@ -12,25 +12,34 @@ import Error from './components/Error';
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer';
 import Checkout from './components/Checkout';
+//auth provider
+import { AuthProvider } from './context/AuthContext';
+import Login from './components/Login';
+import Register from './components/Register';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
 
 
   console.log('App')
   return (
-    <CartProvider>
-    <BrowserRouter>
-      <NavBarRBS />
-      <Routes>
-        <Route path='/' element={<ItemListContainer greeting='Bienvenidos a mi App' />} />
-        <Route path='/category/:type' element={<ItemListContainer greeting='Estas en la categoría: ' />} />
-        <Route path='/item/:id' element={<ItemDetailContainer />} />
-        <Route path='/checkout' element={<Checkout/>}/>
-         <Route path='/cart' element={<CartContainer />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
-    </BrowserRouter>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBarRBS/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting='Bienvenidos a mi App' />} />
+            <Route path='/category/:type' element={<ItemListContainer greeting='Estas en la categoría: ' />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/checkout' element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+            <Route path='/cart' element={<CartContainer />} />
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+    </AuthProvider>
   )
 }
 
